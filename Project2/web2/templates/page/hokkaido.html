@@ -1,0 +1,512 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Images/fav.png'%}">
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <title>HOKKAIDO | Japan a dream destination</title>
+</head>
+<body>
+    <div class="top">
+        <nav class="navbar">
+            <a href="{% url 'home' %}"><img src="{% static 'Images/home.png' %}" height="40px" width="100px"></a>
+            <span class="drop">
+                <a href="{% url 'dest' %}">Destinations |</a>
+                <div class="dropcon">
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="{% url 'hokkaido' %}">
+                                        <img src="{% static 'Images/newpage/hokkaido.png' %}" height="40px" width="40px"><br><br>
+                                        <b>HOKKAIDO</b><br>
+                                        <i>Asahikawa</i><br>
+                                        <i>Hakodate</i><br>
+                                        <i>Kushiro</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'tohoku' %}">
+                                        <img src="{% static 'Images/newpage/tohoku.png' %}" height="40px" width="40px"><br><br>
+                                        <b>TOHOKU</b><br>
+                                        <i>Aomori</i><br>
+                                        <i>Fukushima</i><br>
+                                        <i>Yamagata</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'hokuriku' %}">
+                                        <img src="{% static 'Images/newpage/hokurikushinetsu.png' %}" height="40px" width="40px"><br><br>
+                                        <b>HOKURIKU SHINETSU</b><br>
+                                        <i>Ishikawa</i><br>
+                                        <i>Fukui</i><br>
+                                        <i>Toyama</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'kanto' %}">
+                                        <img src="{% static 'Images/newpage/kanto.png' %}" height="40px" width="40px"><br><br>
+                                        <b>KANTO</b><br>
+                                        <i>Tokyo</i><br>
+                                        <i>Chiba</i><br>
+                                        <i>Saitama</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'tokai' %}">
+                                        <img src="{% static 'Images/newpage/tokai.png' %}" height="40px" width="40px"><br><br>
+                                        <b>TOKAI</b><br>
+                                        <i>Aichi</i><br>
+                                        <i>Shizuoka</i><br>
+                                        <i>Yamanashi</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/kansai.png' %}" height="40px" width="40px"><br><br>
+                                        <b>KANSAI</b><br>
+                                        <i>Kyoto</i><br>
+                                        <i>Osaka</i><br>
+                                        <i>Hyogo</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/chugoku.png'%}" height="40px" width="40px"><br><br>
+                                        <b>CHUGOKU</b><br>
+                                        <i>Hiroshima</i><br>
+                                        <i>Okayama</i><br>
+                                        <i>Shimane</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/shikoku.png'%}" height="40px" width="40px"><br><br>
+                                        <b>SHIKOKU</b><br>
+                                        <i>Ehime</i><br>
+                                        <i>Kagawa</i><br>
+                                        <i>Tokushima</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/kyushu.png'%}" height="40px" width="40px"><br><br>
+                                        <b>KYUSHU</b><br>
+                                        <i>Fukuoka</i><br>
+                                        <i>Nagasaki</i><br>
+                                        <i>Miyazaki</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/oki.png'%}" height="40px" width="40px"><br><br>
+                                        <b>OKINAWA</b><br>
+                                        <i>Kerama Island</i><br>
+                                        <i>Ishigaki Island</i><br>
+                                        <i>Miyako Island</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </span>
+            <span class="drop">
+                <a href="{% url 'ttd' %}">Things to Do |</a>
+                <a href="{% url 'ttd' %}"><div class="dropcon">
+                    <ul>
+                        <li>Nature & Outdoor</li>
+                        <li>Tradition</li>
+                        <li>Food & Drink</li>
+                        <li>Art & Culture</li>
+                        <li>Relaxation</li>
+                    </ul><BR>
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>Diving in Japan</td>
+                                <td>Japanese Gardens</td>
+                                <td>Sushi in Japan</td>
+                                <td>Art Festivals</td>
+                                <td>Onsen</td>
+                            </tr>
+                            <tr>
+                                <td>Skiing in Japan</td>
+                                <td>Japanese Crafts</td>
+                                <td>Vegetarian & Non Veg Guide</td>
+                                <td>Japanese Anime & Comics</td>
+                                <td>Japanese Gardens</td>
+                            </tr>
+                            <tr>
+                                <td>Seasonal Flowers</td>
+                                <td>Temple Stays</td>
+                                <td>Local Street Food</td>
+                                <td>Japanese Ceramics</td>
+                                <td>Wellness Travel in Japan</td>
+                            </tr>
+                            <tr>
+                                <td>Sustainable Outdoors</td>
+                                <td>Heritage Stays</td>
+                                <td>Yakitori</td>
+                                <td>Local Crafts</td>
+                                <td>Shinrin-Yoku</td>
+                            </tr>
+                            <tr>
+                                <td>World Heritage</td>
+                                <td>Japanese Tea Ceremony</td>
+                                <td>Local cuisine Eastern Japan</td>
+                                <td>Performing Arts</td>
+                                <td>Stargazing in Japan</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="navlef">
+                        <ul>
+                            <li><img src="{% static 'Images/newpage/skii.jpg'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/garden.jpg'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/sushi.jpg'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/art.jpg'%}"  height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/onsen.jpg'%}" height="90px" width="120px"></li>
+                        </ul>
+                    </section>
+                </div></a>
+            </span>
+            <span class="drop">
+                <a href="{% url 'error' %}">Plan Your Trip |</a>
+                <div class="dropcon">
+                    <ul>
+                        <li>First-Time Visitor Info</li>
+                        <li>All Stories & Guides</li>
+                        <li>All Itineraries</li>
+                    </ul><BR>
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>Visa Information</td>
+                                <td>Shopping</td>
+                                <td>Hokkaido Great Outdoors</td>
+                            </tr>
+                            <tr>
+                                <td>Getting to Japan</td>
+                                <td>Anime Tourism</td>
+                                <td>Scenic World Heritage</td>
+                            </tr>
+                            <tr>
+                                <td>Airport Access</td>
+                                <td>Temple Stays</td>
+                                <td>Shikoku's Nature and Traditions</td>
+                            </tr>
+                            <tr>
+                                <td>Information for Traveling to Japan</td>
+                                <td>Countryside Stays</td>
+                                <td>Southern kyushu by Rail</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="navlef">
+                        <ul>
+                            <li><img src="{% static 'Images/newpage/flag.png'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/mall.png'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/heritage.jpg'%}" height="90px" width="120px"></li>
+                        </ul>
+                    </section>
+                </div>
+            </span>
+            <span>
+                <a href="{% url 'error' %}">News |</a>
+            </span>
+            <a class="imgpad" href="{% url 'error' %}"><img src="{% static 'Images/fb.png'%}" height="20px" width="20px"></a>
+            <a href="{% url 'error' %}"><img src="{% static 'Images/insta.png'%}" height="20px" width="20px"></a>
+            <a href="{% url 'error' %}"><img src="{% static 'Images/youtube.png'%}" height="20px" width="20px"></a>
+            <a href="{% url 'regi' %}"><img src="{% static 'Images/user.png'%}" height="20px" width="20px"></a>
+        </nav>
+        <!--Banner-->
+        <div class="banner" style="background-image: url({% static 'Images/Hokkaido/Hokkaban.jpg'%});">
+            <span class="s">Explore Japan's Northmost Prefecture</span><br>
+            <span class="b">HOKKAIDO</span>
+        </div>
+    </div>
+    <!--Contect des-->
+    <div class="newbod">
+        <section>
+            <h3>Japan's northern island is famous for its beautiful wilderness, world class powder snow, delicious seafood and fascinating indigenous culture. 
+                Just a short flight from Tokyo, Hokkaido is the perfect escape in all seasons
+            </h3>
+            <p>Hokkaido is a popular destination for skiing and snowboarding in winter, thanks to its abundant powder snow and top resorts like Niseko, Rusutsu 
+                and Furano. Sapporo, Hokkaido's main city, famous for Sapporo beer, Sapporo ramen and the annual Sapporo Snow Festival. Hakodate is a 
+                traditional port with charming historical areas and gorgeous night views. Hokkaido's mild summers provide relief from Japan's humidity, and the 
+                perfect conditions for hiking and exploring the many National Parks. Much of Hokkaido is wild and unspoiled, with natural hot springs, volcanic 
+                lakes and unforgettable experiences. Explore the culture and traditions of the indigenous Ainu people at Lake Akan, and journey to the 
+                Shiretoko Peninsula to see free-roaming brown bears, foxes and deer.<br><br><br>
+    
+     
+    
+                Find the latest information on the Sapporo Snow Festival at <a href="https://www.snowfes.com/">https://www.snowfes.com/</a>
+            </p>
+        </section>
+        <section class="newbodimg">
+            <img src="{% static 'Images/Hokkaido/hokk01.jpg'%}" height="300px" width="50%">
+            <img src="{% static 'Images/Hokkaido/hokk02.jpg'%}" height="300px" width="50%">
+        </section>
+        <section>
+            <h3>How to Get There</h3>
+            <p>
+                Hokkaido is accessible by plane from all major airports in Japan to New Chitose Airport near Sapporo, with international flights from Shanghai 
+                and Seoul. Direct flights from Tokyo take about 90 minutes. There are also several international flights. It is possible to take the Shinkansen 
+                from Tokyo. The Japan Rail Pass can be used to travel on the Shinkansen.
+            </p>
+            <p>
+                The fastest way to reach Hokkaido is by plane. Flights from Tokyo to Sapporo's New Chitose Airport take about 90 minutes. By train, it takes 
+                around eight hours from Tokyo. Take the JR Tohoku/Hokkaido Shinkansen from Tokyo to Shin-Hakodate-Hokuto, then transfer to the Hokuto limited 
+                express to Sapporo. There are also some inexpensive long-distance ferries from Honshu to ports outside of Sapporo. Niigata, Oarai (Ibaraki 
+                Prefecture), Sendai, Nagoya, Maizuru (Kyoto Prefecture) and Tsuruga (Fukui Prefecture) all have ferries that go to Hokkaido.
+            </p>
+        </section>
+        <section class="newbodhig">
+            <h3>Don't Miss</h3>
+            <ul>
+                <li>Hitting the slopes of Niseko and Rusutu in winter</li>
+                <li>The rolling hills of Furano's lavender farms in summer</li>
+                <li>Fresh seafood including succulent crab, salmon and fresh sushi</li>
+                <li>The unspoiled wilderness of Hokkaido's national parks</li>
+            </ul>
+        </section>
+    </div>
+    <hr>
+    <!--Location 2-->
+    <div class="newbod">
+        <h1>ASAHIKAWA</h1>
+        <section class="newbodimg">
+            <img src="{% static 'Images/Hokkaido/hokk1.jpg'%}" height="300px" width="50%">
+            <img src="{% static 'Images/Hokkaido/hokk2.jpg'%}" height="300px" width="50%">
+        </section>
+        <section>
+            <h3>A thriving city of artisans, with a major zoo and world-class powder snow</h3>
+            <p>Hokkaido's second-largest city, Asahikawa, lies to the northwest of the Daisetsuzan  mountain range and is a major gateway for exploring Sounkyo
+                 Gorge  and the Furano  area. The city itself has well over 100 rivers flowing through it, a flourishing culture of arts and crafts, and a 
+                 major zoo.<br><br><br>
+                 The Asahikawa area also presents great runs for skiing and snowboarding when winter comes along, plus a snow festival that rivals Sapporo's.
+            </p>
+        </section>
+        <section>
+            <h3>How to Get There</h3>
+            <p>
+                You can get to Asahikawa Airport via plane  and JR Asahikawa Station by train, and then to central Asahikawa by bus.
+            </p>
+            <p>
+                The journey by train from JR Tokyo Station  to JR Asahikawa Station takes 10 hours, including an 80-minute JR Hokkaido train ride from Sapporo 
+                Station . The Japan Rail Pass  covers all JR train legs. Multiple flights go from Haneda Airport  in Tokyo to Asahikawa Airport.
+            </p>
+            <h3>A Heritage of arts and crafts</h3>
+            <p>
+                Asahikawa is a hotbed of renowned artists, craft workers and sculptors producing high-quality handcrafted goods. You'll see a lot of sculptures 
+                along Heiwa Street, or Peace Street, the main road from Asahikawa Station. You can pick up unique mementos at the many small galleries and 
+                stores around the city.
+            </p>
+            <h3>See Animals in their natural habitats</h3>
+            <p>
+                Japan's northernmost zoo, Asahiyama Zoo  is one of the highlights of this city. The enclosures are designed to give you unusual views of the 
+                animals so that you're essentially on exhibit to them as well. You can watch polar bears diving for food, see spotted seals swimming above as 
+                you walk through a large transparent tunnel, and explore many other similar exhibits.
+            </p>
+            <p>
+                The zoo features many animals indigenous to the region, such as cranes, eagles and Hokkaido deer. Feeding times vary, and the keepers announce 
+                the times for the different animals on the day. Don't forget to check the schedule on entering the zoo. Times are generally staggered, so if 
+                you plan accordingly, you can catch many of your favorite animals at their most active.
+            </p>
+        </section>
+        <section class="newbodimg">
+            <img src="{% static 'Images/Hokkaido/hokk3.jpg'%}" height="300px" width="50%">
+        </section>
+        <section class="newbodhig">
+            <h3>Don't Miss</h3>
+            <ul>
+                <li>Asahiyama Zoo and its natural animal environments</li>
+                <li>Sake-making exhibits and tastings</li>
+                <li>The spectacular Asahikawa Winter Festival</li>
+            </ul>
+        </section>
+    </div>
+    <hr>
+    <!--Location 2-->
+    <div class="newbod">
+        <h1>HOKODATE</h1>
+        <section class="newbodimg">
+            <img src="../Images/Hokkaido/hokk4.jpg" height="300px" width="50%">
+        </section>
+        <section>
+            <h3>Retro Western influences, succulent seafood, outback pleasures and spectacular night views</h3>
+            <p>The picturesque city of Hakodate is renowned for its fresh seafood and spectacular views, while its location at the southern tip of Hokkaido 
+                makes it a convenient base for exploring the abundance of nature nearby.
+            </p>
+        </section>
+        <section>
+            <h3>How to Get There</h3>
+            <p>
+                Hakodate is accessible by air , rail, road, and sea.
+
+                You can fly directly to Hakodate from major airports across Japan and within Hokkaido from Chitose, Okadama, and Okushiri airports.
+
+                The JR Tohoku/Hokkaido Shinkansen links Tokyo with Shin-Hakodate-Hokuto Station in four hours. Take a local train from Shin-Hakodate-Hokuto 
+                Station for the final leg of the journey to Hakodate. Within Hokkaido, there are JR express and local trains from Sapporo to Hakodate. All 
+                are covered by the JR Rail Pass .
+            </p>
+            <p>
+                Alternately, the Hokuto Kotsu, Hokkaido Bus, and Hokkaido Chuo Bus services operate from Sapporo Station. If you're looking for a scenic 
+                option, there are regularly ferry services across the Tsugaru Strait between Hakodate and Aomori. The journey can take up to four hours.
+            </p>
+            <section class="newbodimg">
+                <img src="../Images/Hokkaido/hokk5.jpg" height="300px" width="50%">
+                <img src="../Images/Hokkaido/hokk6.jpg" height="300px" width="50%">
+            </section>
+            <h3>Frontier spirit, preserved</h3>
+            <p>
+                Hakodate's modern face emerged during the 19th century as Japan reopened to the world. The historic Motomachi  district is home to many 
+                buildings dating back to this period.<br><br>
+
+                Be sure to take a leisurely stroll through Hakodate's past and check out the Kanemori Red Brick Warehouse complex, which is now one of 
+                the city's go-to destinations for shopping and dining.
+            </p>
+            <h3>Vibrantly colored alpine plant life at Mt. Esan</h3>
+            <p>
+                Another destination to consider is Mt. Esan, two hours east of Hakodate by bus. Mt. Esan is an active volcano renowned for its wealth of 
+                alpine plants. Look out for the azalea festival in early summer when there is an explosion of red at the foot of the mountain.
+            </p>
+            <h3>Soak in an onsen right by the sea</h3>
+            <p>
+                On the coast, Mizunashi Kaihin Hot Spring lets you bathe right by the sea. You'll need to time your visit properly, though, since it's 
+                only possible to take a dip when the tide is low.
+            </p>
+        </section>
+        <section class="newbodimg">
+            <img src="../Images/Hokkaido/hokk7.jpg" height="300px" width="50%">
+        </section>
+        <section class="newbodhig">
+            <h3>Don't Miss</h3>
+            <ul>
+                <li>Shopping in the historic Motomachi district</li>
+                <li>Glittering night views of the city from Mt. Hakodate</li>
+                <li>A relaxing stroll around Onuma Quasi-National Park and Lake Onuma</li>
+            </ul>
+        </section>
+    </div>
+    <hr>
+    <!--Location 3-->
+    <div class="newbod">
+        <h1>KUSHIRO</h1>
+        <section class="newbodimg">
+            <img src="../Images/Hokkaido/hokk8.png" height="300px" width="50%">
+        </section>
+        <section>
+            <h3>Nature in the Raw</h3>
+            <p>
+                Visit magnificent Eastern Hokkaido to see some of the most pristine scenery and wildlife habitats in Japan. Home to three of Hokkaido's six 
+                national parks, this vast and secluded corner of Japan is well worth the trip at any time of year.
+            </p>
+        </section>
+        <section>
+            <h3>How to Get There</h3>
+            <p>
+                More than five airports serve the extensive  eastern Hokkaido region. You can also access the various areas by train from Sapporo and other 
+                major cities, covered by the Japan Rail Pass .
+
+                For Obihiro  and Monbetsu: Tokachi Obihiro Airport and Okhotsk Monbetsu Airport have direct flights to Tokyo.
+            </p>
+            <p>
+                For Kushiro Marsh  and Akan-Mashu National Park : Kushiro Airport has direct flights from Sapporo (Okadama/New Chitose Airport), Tokyo (Tokyo 
+                International Airport/Narita International Airport) and Osaka (Kansai International Airport). Seasonal flights include direct flights from 
+                Central Japan International Airport (Centrair) and Osaka (Osaka International Airport).
+
+                For Abashiri  area and Shiretoko  area: Memanbetsu Airport has direct flights to Chitose (Sapporo) and Tokyo.
+            </p>
+            <section class="newbodimg">
+                <img src="../Images/Hokkaido/hokk9.png" height="300px" width="50%">
+            </section>
+            <h3>Soak in the water and the scenery</h3>
+            <p>
+                Drive south along the coast to admire the magnificent views and birdlife at Notsuke Peninsula , Lake Furenko, and Cape Nosappu, or turn inland 
+                to Akan-Mashu National Park . Don't miss the stunning scenery around Lake Mashu and the serene blue waters of Kaminokoike Pond on the east 
+                side of the park, before heading for a hot soak in an onsen overlooking beautiful Lake Akan.
+            </p>
+            <h3>Whale watch and watch out for bears</h3>
+            <p>
+                In the warmer months, fly to Memanbetsu or Nakashibetsu and take a tour of Shiretoko National Park . Jump on a cruise from Utoro or Rausu for 
+                the best views of Japan's great untouched wilderness, and spot bears on the beach or sperm whales diving in the sea.
+            </p>
+        </section>
+        <section class="newbodhig">
+            <h3>Don't Miss</h3>
+            <ul>
+                <li>Enjoy the breathtaking scenery of Akan-Mashu National Park and Shiretoko National Park</li>
+                <li>Encounter Eastern Hokkaido's varied wildlife on land and sea</li>
+                <li>Visit the Kushiro Marshes, Japan's largest marshland</li>
+                <li>Come for the spectacular drift ice season</li>
+            </ul>
+        </section>
+    </div>
+    <!--Footer-->
+    <footer style="clear: both;">
+        <div class="detail">
+            <b>Home &gt; Travel Japan - The Offical Japan Guide</b>
+        </div>
+        <div class="hellin">
+            <table>
+                <tr>
+                    <th>Helpful Links</th>
+                    <th>Related JNTO Sites</th>
+                    <th>About JNTO</th>
+                </tr>
+                <tr>
+                    <td><a href="../other/error.html">First-time Visitors</a></td>
+                    <td><a href="../other/error.html">Japan Covention Bureau</a></td>
+                    <td><a href="../other/error.html">Who we are</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../other/error.html">Weather in Japan</a></td>
+                    <td><a href="../other/error.html">JNTO for the Media</a></td>
+                    <td><a href="../other/error.html">Contact us</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../other/error.html">Japan Tours & Activities</a></td>
+                    <td><a href="../other/error.html"></a></td>
+                    <td><a href="../other/error.html">Tenders & Notices</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../other/error.html">FAQ</a></td>
+                </tr>
+            </table>
+            <hr>
+            <div class="jnto">
+                <section><img src="../Images/JNTO.jpg" alt=""></section>
+                <section>Privacy Pilcy</section>
+                <section>Cookie Policy</section>
+                <section>Terms of Use</section>
+                <section>Links</section>
+                <section><img src="../Images/fb.png" width="30px" height="30px"></section>
+                <section><img src="../Images/insta.png" width="30px" height="30px"></section>
+                <section><img src="../Images/youtube.png" width="30px" height="30px"></section>
+            </div>
+        </div>
+        <div class="coptab">
+            <section>
+                <span>Select Language</span>
+                <select name="lang">
+                    <option value="1">Japanese</option>
+                    <option value="2">Korean</option>
+                    <option value="3">Chinese</option>
+                    <option value="4">Hindi</option>
+                    <option value="5">French</option>
+                </select>
+            </section>
+            <section>
+                <span>Copyright © Japan National Tourism Organization. All Rights Rederved. 
+                </span>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

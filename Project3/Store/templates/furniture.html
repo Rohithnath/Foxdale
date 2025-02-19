@@ -1,0 +1,126 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block content %}
+
+  <!-- furniture section -->
+
+  <section class="furniture_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Furniture
+        </h2>
+        <p>
+          which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't an
+        </p>
+      </div>
+      <div class="row">
+        {%for i in products%}
+        <div class="col-md-6 col-lg-4">
+          <div class="box">
+            {% if i.id in wishlist_item %}
+            <button type="button" class="btn" onclick="unlist_wish({{ i.id }})" id="listed{{ i.id }}">
+              <i class="bi bi-star-fill"></i>
+            </button>
+            <button class="btn" type="button" onclick="wishitem({{ i.id }})" id="star{{ i.id }}" style="display:none;">
+              <i class="bi bi-star"></i>
+            </button>
+            {% else %}
+            <button class="btn" type="button" onclick="wishitem({{ i.id }})" id="star{{ i.id }}">
+              <i class="bi bi-star"></i>
+            </button>
+            <button type="button" class="btn" onclick="unlist_wish({{ i.id }})" id="listed{{ i.id }}" style="display:none;">
+              <i class="bi bi-star-fill"></i>
+            </button>
+            {% endif %}
+          
+            <script>
+              function wishitem(product_id) {
+          
+                  fetch('/wish_list/' + product_id + '/', {
+                      method: 'GET',
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                      document.getElementById('star' + product_id).style.display = 'none';
+                      document.getElementById('listed' + product_id).style.display = 'inline-block';
+                  })
+                  .catch(error => {
+                      console.error('Error:', error);
+                  });
+              }
+          
+              function unlist_wish(product_id) {
+          
+                  fetch('/unlist_wish/' + product_id + '/', {
+                      method: 'GET',
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                      document.getElementById('listed' + product_id).style.display = 'none';
+                      document.getElementById('star' + product_id).style.display = 'inline-block';
+                  })
+                  .catch(error => {
+                      console.error('Error:', error);
+                  });
+              }
+          </script>
+          
+            <div class="img-box">
+             <img src="{{i.productimage.url}}">
+            </div>
+            <div class="detail-box">
+              <h5>
+                {{i.productname}}
+              </h5>
+              <div class="price_box">
+                <h6 class="price_heading">
+                  <span>$</span> {{i.productprice}}
+                </h6>
+                <a href="{% url 'store_app:display' i.id %}">
+                  Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- end furniture section -->
+
+  <script>
+    function wishitem(product_id) {
+
+        fetch('/wish_list/' + product_id + '/', {
+            method: 'GET',
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('star' + product_id).style.display = 'none';
+            document.getElementById('listed' + product_id).style.display = 'inline-block';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    function unlist_wish(product_id) {
+
+        fetch('/unlist_wish/' + product_id + '/', {
+            method: 'GET',
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('listed' + product_id).style.display = 'none';
+            document.getElementById('star' + product_id).style.display = 'inline-block';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+  {% endblock%}

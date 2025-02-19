@@ -1,0 +1,581 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Images/fav.png' %}">
+    <link rel='stylesheet' href="{% static 'css/home.css' %}">
+    <title>Japan a dream destination</title>
+</head>
+<body>
+    <div class="top">
+        <nav class="navbar">
+            <a href="{% url 'home' %}"><img src="{% static 'Images/home.png' %}" height="40px" width="100px"></a>
+            <span class="drop">
+                <a href="{% url 'dest' %}">Destinations |</a>
+                <div class="dropcon">
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="{% url 'hokkaido' %}">
+                                        <img src="{% static 'Images/newpage/hokkaido.png' %}" height="40px" width="40px"><br><br>
+                                        <b>HOKKAIDO</b><br>
+                                        <i>Asahikawa</i><br>
+                                        <i>Hakodate</i><br>
+                                        <i>Kushiro</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'tohoku' %}">
+                                        <img src="{% static 'Images/newpage/tohoku.png' %}" height="40px" width="40px"><br><br>
+                                        <b>TOHOKU</b><br>
+                                        <i>Aomori</i><br>
+                                        <i>Fukushima</i><br>
+                                        <i>Yamagata</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'hokuriku' %}">
+                                        <img src="{% static 'Images/newpage/hokurikushinetsu.png' %}" height="40px" width="40px"><br><br>
+                                        <b>HOKURIKU SHINETSU</b><br>
+                                        <i>Ishikawa</i><br>
+                                        <i>Fukui</i><br>
+                                        <i>Toyama</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'kanto' %}">
+                                        <img src="{% static 'Images/newpage/kanto.png' %}" height="40px" width="40px"><br><br>
+                                        <b>KANTO</b><br>
+                                        <i>Tokyo</i><br>
+                                        <i>Chiba</i><br>
+                                        <i>Saitama</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'tokai' %}">
+                                        <img src="{% static 'Images/newpage/tokai.png' %}" height="40px" width="40px"><br><br>
+                                        <b>TOKAI</b><br>
+                                        <i>Aichi</i><br>
+                                        <i>Shizuoka</i><br>
+                                        <i>Yamanashi</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/kansai.png' %}" height="40px" width="40px"><br><br>
+                                        <b>KANSAI</b><br>
+                                        <i>Kyoto</i><br>
+                                        <i>Osaka</i><br>
+                                        <i>Hyogo</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/chugoku.png'%}" height="40px" width="40px"><br><br>
+                                        <b>CHUGOKU</b><br>
+                                        <i>Hiroshima</i><br>
+                                        <i>Okayama</i><br>
+                                        <i>Shimane</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/shikoku.png'%}" height="40px" width="40px"><br><br>
+                                        <b>SHIKOKU</b><br>
+                                        <i>Ehime</i><br>
+                                        <i>Kagawa</i><br>
+                                        <i>Tokushima</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/kyushu.png'%}" height="40px" width="40px"><br><br>
+                                        <b>KYUSHU</b><br>
+                                        <i>Fukuoka</i><br>
+                                        <i>Nagasaki</i><br>
+                                        <i>Miyazaki</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'error' %}">
+                                        <img src="{% static 'Images/newpage/oki.png'%}" height="40px" width="40px"><br><br>
+                                        <b>OKINAWA</b><br>
+                                        <i>Kerama Island</i><br>
+                                        <i>Ishigaki Island</i><br>
+                                        <i>Miyako Island</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </span>
+            <span class="drop">
+                <a href="{% url 'ttd' %}">Things to Do |</a>
+                <a href="{% url 'ttd' %}"><div class="dropcon">
+                    <ul>
+                        <li>Nature & Outdoor</li>
+                        <li>Tradition</li>
+                        <li>Food & Drink</li>
+                        <li>Art & Culture</li>
+                        <li>Relaxation</li>
+                    </ul><BR>
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>Diving in Japan</td>
+                                <td>Japanese Gardens</td>
+                                <td>Sushi in Japan</td>
+                                <td>Art Festivals</td>
+                                <td>Onsen</td>
+                            </tr>
+                            <tr>
+                                <td>Skiing in Japan</td>
+                                <td>Japanese Crafts</td>
+                                <td>Vegetarian & Non Veg Guide</td>
+                                <td>Japanese Anime & Comics</td>
+                                <td>Japanese Gardens</td>
+                            </tr>
+                            <tr>
+                                <td>Seasonal Flowers</td>
+                                <td>Temple Stays</td>
+                                <td>Local Street Food</td>
+                                <td>Japanese Ceramics</td>
+                                <td>Wellness Travel in Japan</td>
+                            </tr>
+                            <tr>
+                                <td>Sustainable Outdoors</td>
+                                <td>Heritage Stays</td>
+                                <td>Yakitori</td>
+                                <td>Local Crafts</td>
+                                <td>Shinrin-Yoku</td>
+                            </tr>
+                            <tr>
+                                <td>World Heritage</td>
+                                <td>Japanese Tea Ceremony</td>
+                                <td>Local cuisine Eastern Japan</td>
+                                <td>Performing Arts</td>
+                                <td>Stargazing in Japan</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="navlef">
+                        <ul>
+                            <li><img src="{% static 'Images/newpage/skii.jpg'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/garden.jpg'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/sushi.jpg'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/art.jpg'%}"  height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/onsen.jpg'%}" height="90px" width="120px"></li>
+                        </ul>
+                    </section>
+                </div></a>
+            </span>
+            <span class="drop">
+                <a href="{% url 'error' %}">Plan Your Trip |</a>
+                <div class="dropcon">
+                    <ul>
+                        <li>First-Time Visitor Info</li>
+                        <li>All Stories & Guides</li>
+                        <li>All Itineraries</li>
+                    </ul><BR>
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>Visa Information</td>
+                                <td>Shopping</td>
+                                <td>Hokkaido Great Outdoors</td>
+                            </tr>
+                            <tr>
+                                <td>Getting to Japan</td>
+                                <td>Anime Tourism</td>
+                                <td>Scenic World Heritage</td>
+                            </tr>
+                            <tr>
+                                <td>Airport Access</td>
+                                <td>Temple Stays</td>
+                                <td>Shikoku's Nature and Traditions</td>
+                            </tr>
+                            <tr>
+                                <td>Information for Traveling to Japan</td>
+                                <td>Countryside Stays</td>
+                                <td>Southern kyushu by Rail</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="navlef">
+                        <ul>
+                            <li><img src="{% static 'Images/newpage/flag.png'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/mall.png'%}" height="90px" width="120px"></li>
+                            <li><img src="{% static 'Images/newpage/heritage.jpg'%}" height="90px" width="120px"></li>
+                        </ul>
+                    </section>
+                </div>
+            </span>
+            <span>
+                <a href="{% url 'regi' %}">Register or Login |</a>
+            </span>
+            <a class="imgpad" href="{% url 'error' %}"><img src="{% static 'Images/fb.png'%}" height="20px" width="20px"></a>
+            <a href="{% url 'error' %}"><img src="{% static 'Images/insta.png'%}" height="20px" width="20px"></a>
+            <a href="{% url 'error' %}"><img src="{% static 'Images/youtube.png'%}" height="20px" width="20px"></a>
+            <a href="{% url 'regi' %}"><img src="{% static 'Images/user.png'%}" height="20px" width="20px"></a>
+        </nav>
+        <div class="slides">
+            <section class="slicon">
+                <span>Your Destination Awaits You</span>
+            </section>
+        </div>
+
+        <div class="mid">
+            <section class="midlef">
+                <h1>Regions of Japan</h1>
+                <section class="minsec">
+                    <section class="slide">
+                        <div class="slide1">
+                            <img src="{% static 'Images/min1.jpg'%}" class="img"><br>
+                            <span class="minloc">
+                                <b>Hokkaido</b><br>
+                                <p>
+                                    Japan's great white north offers wild, white winters and bountiful summers-a haven
+                                    for dedicated foodies, nature lovers and outdoor adventure fans seeking an adrenaline &emsp;rush
+                                </p>
+                            </span>
+                        </div>
+                        <div class="slide2">
+                            <img src="{% static 'Images/min2.jpg'%}" alt="" class="img"><br>
+                            <span class="minloc">
+                                <b>Tohoku</b><br>
+                                <ul>
+                                    <li>Aomori |</li>
+                                    <li>Akita |</li>
+                                    <li>Iwate |</li>
+                                    <li>Yamagata |</li>
+                                    <li>Miyagi |</li>
+                                    <li>Fukushima</li>
+                                </ul>
+                                <p>Fearsome festivals, fresh powder snow and vast fruit orchards-the rugged territory of
+                                    Tohoku offers a new perspective on travel in Japan
+                                </p>
+                            </span>
+                        </div>
+                        <div class="slide3">
+                            <img src="{% static 'Images/min3.jpg'%}" alt="" class="img"><br>
+                            <span class="minloc">
+                                <b>Kanto</b><br>
+                                <ul>
+                                    <li>Tokyo |</li>
+                                    <li>Kanagawa |</li>
+                                    <li>Chiba |</li>
+                                    <li>Saitama |</li>
+                                    <li>Ibaraki |</li>
+                                    <li>Tochigi |</li>
+                                    <li>Gunma</li>
+                                </ul>
+                                <p>Jump from the neon glow of Tokyoto Gunma's mountain retreats, kamakura's cultural heritage
+                                    and the Ogasawara Islands' exotic wildlife
+                                </p>
+                            </span>
+                        </div>
+                        <div class="slide4">
+                            <img src="{% static 'Images/min4.jpg'%}" alt="" class="img"><br>
+                            <span class="minloc">
+                                <b>Hokuriku Shinetsu</b><br>
+                                <ul>
+                                    <li>Niigata |</li>
+                                    <li>Toyama |</li>
+                                    <li>Ishikawa |</li>
+                                    <li>Fukui |</li>
+                                    <li>Nagano</li>
+                                </ul>
+                                <p>An easily accessible slice of rural Japan offering unrivaled mountainscapes and costlines,
+                                    endless outdoor adventure and amazing ocean fare
+                                </p>
+                            </span>
+                        </div>
+                        <div class="slide5">
+                            <img src="{% static 'Images/min5.jpg'%}" alt="" class="img"><br>
+                            <span class="minloc">
+                                <b>Tokai</b><br>
+                                <ul>
+                                    <li>Yamanashi |</li>
+                                    <li>Shizuoka |</li>
+                                    <li>Gifu |</li>
+                                    <li>Aichi |</li>
+                                    <li>Mie</li>
+                                </ul>
+                                <p>Hallmark attractions such as Mt.Fuji and Takayama coexist with major cities and famous heritage
+                                    in the center of Japan
+                                </p>
+                            </span>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            
+            <section class="midrig">
+                <img src="{% static 'Images/midbacu.jpg'%}" height="100%" width="100%" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="rect" coords="500,50,750,250" href="{% url 'hokkaido'%}" alt="Hokkaido">
+                    <area shape="rect" coords="500,250,600,450" href="{% url 'tohoku'%}" alt="Tohoku">
+                    <area shape="rect" coords="470,450,550,550" href="{% url 'kanto'%}" alt="Kanto">
+                    <area shape="rect" coords="400,400,500,500" href="{% url 'hokuriku'%}" alt="hokuriku">
+                    <area shape="rect" coords="370,500,480,600" href="{% url 'tokai'%}" alt="Tokai">
+                    <area shape="rect" coords="300,500,380,600" href="{% url 'kansai'%}" alt="Kansai">
+                    <area shape="rect" coords="200,520,300,580" href="{% url 'chugoku'%}" alt="Chugoku">
+                    <area shape="rect" coords="230,600,310,650" href="{% url 'shikoku'%}" alt="Shikoku">
+                    <area shape="rect" coords="120,600,210,750" href="{% url 'kyushu'%}" alt="Kyushu">
+                    <area shape="rect" coords="620,600,810,750" href="{% url 'okinawa'%}" alt="Okinawa">
+                </map>
+            </section>
+        </div>
+
+        <div class="godjap">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/0Pup_huMohQ?si=iJ4G9gLl1eo7_jJc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="content">
+            <h1>Model Routes </h1>
+            <section class="coninf">
+                
+                {% for i in packagename %}
+                <span>
+                                {{i.packname}}<br>
+                                <img src="{{i.packimg}}" height="50" width="60"><br>
+                                <div style="width:380px">{{i.packdesc}}</div><br>
+                                {{i.packprice}}<br>
+                                {{i.cancel}}<br>
+                                {{i.duration}}<br>
+                                {{i.guide}}<br>
+                                {{i.groupsize}}<br>
+                </span>
+                {% endfor %}
+
+            </section><br>
+
+            <h1>Travel Must Do</h1>
+            <section class="coninf">
+                <span>
+                    <img src="{% static 'Images/content/cherry-blossom.jpg'%}" height="250" width="260"><br>
+                    <p>Cherry Blossoms in Japan</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/theme-parks.jpg'%}" height="250" width="260"><br>
+                    <p>Theme Parks in Japan</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/autumn-colors.jpg'%}" height="250" width="260"><br>
+                    <p>Autumn Colors in Japan</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/ski-snow.jpg'%}" height="250" width="260"><br>
+                    <p>Ski & Snow in Japan</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/indian-resturant.jpg'%}" height="250" width="260"><br>
+                    <p>Indian Restaurant</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/commemorating-70-years.jpg'%}" height="250" width="260"><br>
+                    <p>Friends</p>
+                </span>
+            </section><br>
+            
+            <h1>Experience Vlogs</h1>
+            <section class="coninf">
+                <span>
+                    <img src="{% static 'Images/content/okutama_kayaking.jpg'%}" height="250" width="260"><br>
+                    <p>Okutama Kayaking Tour</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/hotel_chinzanso.jpg'%}" height="250" width="260"><br>
+                    <p>Hotel Chinzanso Tokyo</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/hoshino-resort.jpg'%}" height="250" width="260"><br>
+                    <p>Hokkaido Tomamu</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/paragliding.jpg'%}" height="250" width="260"><br>
+                    <p>Hokkaido Furano</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/ishiya.jpg'%}" height="250" width="260"><br>
+                    <p>Hokkaido Sapporo</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/dsc04138.jpg'%}" height="250" width="260"><br>
+                    <p>Hakone</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/seibuen-amusement.jpg'%}" height="250" width="260"><br>
+                    <p>Seibuen Amusement Park</p>
+                </span>
+            </section><br>
+
+            <h1>Basic Information</h1>
+            <section class="coninf">
+                <span>
+                    <img src="{% static 'Images/content/visa.jpeg.jpg'%}" height="320" width="280"><br>
+                    <p>Visa Information</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/air.jpg'%}" height="320" width="280"><br>
+                    <p>Airport Access</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/indian-resturant.jpg'%}" height="320" width="280"><br>
+                    <p>Indian Restaurants</p>
+                </span>
+                <span>
+                    <img src="{% static 'Images/content/tour.jpg'%}" height="320" width="280"><br>
+                    <p>Tour Operators</p>
+                </span>
+            </section><br>
+
+            <h1>Popular Places</h1>
+            <table>
+                <tr>
+                    <td colspan="2" rowspan="2" class="widtab">
+                        <img src="{% static 'Images/content/table/tab1.jpeg.jpg'%}">
+                        <span>Imperial Palace & Around</span>
+                    </td>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab2.jpg'%}">
+                        <span>Fukui Prefectual<br>Dinosaur Museum</span>
+                    </td>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab3.jpeg.jpg'%}">
+                        <span>Shinsekai</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab4.jpg'%}">
+                        <span>Dotonbori</span>
+                    </td>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab5.jpg'%}">
+                        <span>Sapporo Beer<br>Museum</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab6.jpg'%}">
+                        <span>Otaru</span>
+                    </td>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab7.jpg'%}">
+                        <span>Tateyama Kurobe<br>Alpine Route(Toyama)</span>
+                    </td>
+                    <td colspan="2" rowspan="2" class="widtab">
+                        <img src="{% static 'Images/content/table/tab8.jpg'%}">
+                        <span>Shirakawa-go</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab9.jpg'%}">
+                        <span>Kerama Islands</span>
+                    </td>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab10.jpg'%}">
+                        <span>Miyajima</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2" class="widtab">
+                        <img src="{% static 'Images/content/table/tab11.jpg'%}">
+                        <span>Coastal Iwate</span>
+                    </td>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab12.jpg'%}">
+                        <span>Gion & Higashiyama</span>
+                    </td>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab13.jpg'%}">
+                        <span>Hakuba</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab14.jpg'%}">
+                        <span>Kanazawa</span>
+                    </td>
+                    <td class="nortab">
+                        <img src="{% static 'Images/content/table/tab15.jpg'%}">
+                        <span>Hirosaki & Around</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="expint">
+                <section></section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="detail">
+                <b>Home &gt; Travel Japan - The Offical Japan Guide</b>
+            </div>
+            <div class="hellin">
+                <table>
+                    <tr>
+                        <th>Helpful Links</th>
+                        <th>Related JNTO Sites</th>
+                        <th>About JNTO</th>
+                    </tr>
+                    <tr>
+                        <td><a href="other/error.html">First-time Visitors</a></td>
+                        <td><a href="other/error.html">Japan Covention Bureau</a></td>
+                        <td><a href="other/error.html">Who we are</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="other/error.html">Weather in Japan</a></td>
+                        <td><a href="other/error.html">JNTO for the Media</a></td>
+                        <td><a href="other/error.html">Contact us</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="other/error.html">Japan Tours & Activities</a></td>
+                        <td><a href="other/error.html"></a></td>
+                        <td><a href="other/error.html">Tenders & Notices</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="other/error.html">FAQ</a></td>
+                    </tr>
+                </table>
+                <hr>
+                <div class="jnto">
+                    <section><img src="{% static 'Images/JNTO.jpg'%}" alt=""></section>
+                    <section>Privacy Pilcy</section>
+                    <section>Cookie Policy</section>
+                    <section>Terms of Use</section>
+                    <section>Links</section>
+                    <section><img src="{% static 'Images/fb.png'%}" width="30px" height="30px"></section>
+                    <section><img src="{% static 'Images/insta.png'%}" width="30px" height="30px"></section>
+                    <section><img src="{% static 'Images/youtube.png'%}" width="30px" height="30px"></section>
+                </div>
+            </div>
+            <div class="coptab">
+                <section>
+                    <span>Select Language</span>
+                    <select name="lang">
+                        <option value="1">Japanese</option>
+                        <option value="2">Korean</option>
+                        <option value="3">Chinese</option>
+                        <option value="4">Hindi</option>
+                        <option value="5">French</option>
+                    </select>
+                </section>
+                <section>
+                    <span>Copyright © Japan National Tourism Organization. All Rights Rederved. 
+                    </span>
+                </section>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

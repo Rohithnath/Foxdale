@@ -1,0 +1,146 @@
+client=razorpay.Client(auth=(settings.KEY,settings.SECRET))
+import hmac
+import hashlib
+
+from payments.models import Subscription
+def plan_details(request,slug):
+    if not request.user.is_authenticated:
+        messages.warning(request,"Login & Try Again")
+        return redirect('home:login')
+    plan = get_object_or_404(Plan, slug=slug)
+    key = settings.KEY
+    amount = plan.price * 100  # Amount in paise
+    currency = 'INR'
+    order = client.order.create({'amount': amount, 'currency': currency, 'payment_capture': "1"})        # RAZORPAY_KEY = settings.KEY
+    print("Order ID:", order['id'])
+    print(order)
+    order_id = order['id']
+    order_amount = order['amount']
+    order_currency = order['currency']
+    secret = settings.SECRET
+
+    # generated_signature = hmac.new(
+    #         bytes(secret, 'utf-8'),
+    #         bytes(f"{order_id}|{payment_id}", 'utf-8'),
+    #         hashlib.sha256
+    #     ).hexdigest()
+    user = request.user
+
+    subscription =Subscription.objects.create(uid=user,rzp_order_id = order_id,plan_id = plan.name,plan_amount = plan.price)
+    subscription.save()
+    context = {
+        'slug':slug,
+        'plans': plan,
+        'key': settings.KEY,
+        'order_id': order_id,
+        'order_amount': order_amount,
+        'order_currency': order_currency
+        }
+
+
+    return render(request,"business_seeker/dashboard/plans/seeker_plans_detaisl.html",context)
+
+
+
+
+client=razorpay.Client(auth=(settings.KEY,settings.SECRET))
+@csrf_exempt
+def payment_success(request):
+    # Get the payment details from the request
+    order_id = request.GET.get('Order_id')
+    payment_id = request.GET.get('payment_id')
+    signature = request.GET.get('signature')
+
+    if not order_id or not payment_id or not signature:
+        messages.error(request, "Missing payment details!")
+        return redirect('payments:payment_failed')
+
+    # Verify the signature to ensure the payment is legitimate
+    params_dict = {
+        'razorpay_order_id': order_id,
+        'razorpay_payment_id': payment_id,
+        'razorpay_signature': signature
+    }
+
+    try:
+        client.utility.verify_payment_signature(params_dict)
+
+        # Additional manual verification (optional, but good for understanding)
+        secret = settings.SECRET
+        generated_signature = hmac.new(
+            bytes(secret, 'utf-8'),
+            bytes(f"{order_id}|{payment_id}", 'utf-8'),
+            hashlib.sha256
+        ).hexdigest()
+
+        if generated_signature != signature:
+            raise razorpay.errors.SignatureVerificationError("Signature mismatch")
+
+        # Fetch payment details
+        payment_details = client.payment.fetch(payment_id)
+        upi_transaction_id = payment_details['acquirer_data'].get('upi_transaction_id')
+        vpa = payment_details.get('vpa')
+        status = payment_details.get('status')
+        method = payment_details.get('method')
+        amount = payment_details['amount'] // 100  # Scaling down by a factor of 100
+
+        try:
+            subscription = Subscription.objects.get(rzp_order_id=order_id)
+        except Subscription.DoesNotExist:
+            messages.error(request, "Subscription not found!")
+            return redirect('payments:payment_failed')
+
+        # Update subscription details
+        subscription.rzp_signature = signature
+        subscription.amount_paid = True
+        subscription.vpa = vpa
+        subscription.status = status
+        subscription.upi_transaction_id = upi_transaction_id
+        subscription.rzp_payment = amount
+        subscription.method = method
+        subscription.payment_date = datetime.now()
+
+        subscription.save()
+
+        try:
+            # Fetch the Plan object based on name and price
+            plans = Plan.objects.get(name=subscription.plan_id, price=subscription.rzp_payment)
+            print(plans)  # This prints the Plan object to the console for debugging
+
+            if plans.type == "Month":
+                # Calculate expiration date for monthly plans (assuming counts represent number of months)
+                exp = datetime.now() + timedelta(days=plans.count * 30)
+            else:
+                # Calculate expiration date for non-monthly plans
+                exp = datetime.now() + timedelta(days=plans.count)
+
+            # 'exp' now holds the calculated expiration date
+            print(exp)  # Print or use 'exp' as needed
+
+            subscription.plan_exp = exp
+            subscription.save()
+            user = request.user.uid
+            wallet_details = Doobiz_Wallet.objects.get(uid=user)
+
+            wallet_details.credits = plans.credits
+            wallet_details.start_date = subscription.payment_date
+            wallet_details.exp_date = exp
+            # wallet_details.plan_code = plans
+            wallet_details.save()
+
+        except Plan.DoesNotExist:
+            # Handle case where Plan with specified name and price does not exist
+            print("Plan not found for name {} and price {}".format(subscription.plan_id, subscription.rzp_payment))
+
+        except Exception as e:
+            # Handle any other exceptions that may occur during the process
+            print("Error:", e)
+        messages.success(request, "Your Plan is now active.")
+        return redirect('payments:plan_purchase')
+
+    except (razorpay.errors.SignatureVerificationError, razorpay.errors.BadRequestError) as e:
+        messages.error(request, f"Payment verification failed: {str(e)}")
+        return redirect('payments:payment_failed')
+    except Exception as e:
+        messages.error(request, f"An error occurred: {str(e)}")
+        return redirect('payments:payment_failed')

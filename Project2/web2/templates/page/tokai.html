@@ -1,0 +1,631 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Images/fav.png'%}">
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+    <title>TOKAI | Japan a dream destination</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'home' %}"><img src="{% static 'Images/home.png' %}" height="40px" width="100px"></a>
+        <span class="drop">
+            <a href="{% url 'dest' %}">Destinations |</a>
+            <div class="dropcon">
+                <section class="navrig">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="{% url 'hokkaido' %}">
+                                    <img src="{% static 'Images/newpage/hokkaido.png' %}" height="40px" width="40px"><br><br>
+                                    <b>HOKKAIDO</b><br>
+                                    <i>Asahikawa</i><br>
+                                    <i>Hakodate</i><br>
+                                    <i>Kushiro</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'tohoku' %}">
+                                    <img src="{% static 'Images/newpage/tohoku.png' %}" height="40px" width="40px"><br><br>
+                                    <b>TOHOKU</b><br>
+                                    <i>Aomori</i><br>
+                                    <i>Fukushima</i><br>
+                                    <i>Yamagata</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'hokuriku' %}">
+                                    <img src="{% static 'Images/newpage/hokurikushinetsu.png' %}" height="40px" width="40px"><br><br>
+                                    <b>HOKURIKU SHINETSU</b><br>
+                                    <i>Ishikawa</i><br>
+                                    <i>Fukui</i><br>
+                                    <i>Toyama</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'kanto' %}">
+                                    <img src="{% static 'Images/newpage/kanto.png' %}" height="40px" width="40px"><br><br>
+                                    <b>KANTO</b><br>
+                                    <i>Tokyo</i><br>
+                                    <i>Chiba</i><br>
+                                    <i>Saitama</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'tokai' %}">
+                                    <img src="{% static 'Images/newpage/tokai.png' %}" height="40px" width="40px"><br><br>
+                                    <b>TOKAI</b><br>
+                                    <i>Aichi</i><br>
+                                    <i>Shizuoka</i><br>
+                                    <i>Yamanashi</i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/kansai.png' %}" height="40px" width="40px"><br><br>
+                                    <b>KANSAI</b><br>
+                                    <i>Kyoto</i><br>
+                                    <i>Osaka</i><br>
+                                    <i>Hyogo</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/chugoku.png'%}" height="40px" width="40px"><br><br>
+                                    <b>CHUGOKU</b><br>
+                                    <i>Hiroshima</i><br>
+                                    <i>Okayama</i><br>
+                                    <i>Shimane</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/shikoku.png'%}" height="40px" width="40px"><br><br>
+                                    <b>SHIKOKU</b><br>
+                                    <i>Ehime</i><br>
+                                    <i>Kagawa</i><br>
+                                    <i>Tokushima</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/kyushu.png'%}" height="40px" width="40px"><br><br>
+                                    <b>KYUSHU</b><br>
+                                    <i>Fukuoka</i><br>
+                                    <i>Nagasaki</i><br>
+                                    <i>Miyazaki</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/oki.png'%}" height="40px" width="40px"><br><br>
+                                    <b>OKINAWA</b><br>
+                                    <i>Kerama Island</i><br>
+                                    <i>Ishigaki Island</i><br>
+                                    <i>Miyako Island</i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </span>
+        <span class="drop">
+            <a href="{% url 'ttd' %}">Things to Do |</a>
+            <a href="{% url 'ttd' %}"><div class="dropcon">
+                <ul>
+                    <li>Nature & Outdoor</li>
+                    <li>Tradition</li>
+                    <li>Food & Drink</li>
+                    <li>Art & Culture</li>
+                    <li>Relaxation</li>
+                </ul><BR>
+                <section class="navrig">
+                    <table>
+                        <tr>
+                            <td>Diving in Japan</td>
+                            <td>Japanese Gardens</td>
+                            <td>Sushi in Japan</td>
+                            <td>Art Festivals</td>
+                            <td>Onsen</td>
+                        </tr>
+                        <tr>
+                            <td>Skiing in Japan</td>
+                            <td>Japanese Crafts</td>
+                            <td>Vegetarian & Non Veg Guide</td>
+                            <td>Japanese Anime & Comics</td>
+                            <td>Japanese Gardens</td>
+                        </tr>
+                        <tr>
+                            <td>Seasonal Flowers</td>
+                            <td>Temple Stays</td>
+                            <td>Local Street Food</td>
+                            <td>Japanese Ceramics</td>
+                            <td>Wellness Travel in Japan</td>
+                        </tr>
+                        <tr>
+                            <td>Sustainable Outdoors</td>
+                            <td>Heritage Stays</td>
+                            <td>Yakitori</td>
+                            <td>Local Crafts</td>
+                            <td>Shinrin-Yoku</td>
+                        </tr>
+                        <tr>
+                            <td>World Heritage</td>
+                            <td>Japanese Tea Ceremony</td>
+                            <td>Local cuisine Eastern Japan</td>
+                            <td>Performing Arts</td>
+                            <td>Stargazing in Japan</td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="navlef">
+                    <ul>
+                        <li><img src="{% static 'Images/newpage/skii.jpg'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/garden.jpg'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/sushi.jpg'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/art.jpg'%}"  height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/onsen.jpg'%}" height="90px" width="120px"></li>
+                    </ul>
+                </section>
+            </div></a>
+        </span>
+        <span class="drop">
+            <a href="{% url 'error' %}">Plan Your Trip |</a>
+            <div class="dropcon">
+                <ul>
+                    <li>First-Time Visitor Info</li>
+                    <li>All Stories & Guides</li>
+                    <li>All Itineraries</li>
+                </ul><BR>
+                <section class="navrig">
+                    <table>
+                        <tr>
+                            <td>Visa Information</td>
+                            <td>Shopping</td>
+                            <td>Hokkaido Great Outdoors</td>
+                        </tr>
+                        <tr>
+                            <td>Getting to Japan</td>
+                            <td>Anime Tourism</td>
+                            <td>Scenic World Heritage</td>
+                        </tr>
+                        <tr>
+                            <td>Airport Access</td>
+                            <td>Temple Stays</td>
+                            <td>Shikoku's Nature and Traditions</td>
+                        </tr>
+                        <tr>
+                            <td>Information for Traveling to Japan</td>
+                            <td>Countryside Stays</td>
+                            <td>Southern kyushu by Rail</td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="navlef">
+                    <ul>
+                        <li><img src="{% static 'Images/newpage/flag.png'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/mall.png'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/heritage.jpg'%}" height="90px" width="120px"></li>
+                    </ul>
+                </section>
+            </div>
+        </span>
+        <span>
+            <a href="{% url 'error' %}">News |</a>
+        </span>
+        <a class="imgpad" href="{% url 'error' %}"><img src="{% static 'Images/fb.png'%}" height="20px" width="20px"></a>
+        <a href="{% url 'error' %}"><img src="{% static 'Images/insta.png'%}" height="20px" width="20px"></a>
+        <a href="{% url 'error' %}"><img src="{% static 'Images/youtube.png'%}" height="20px" width="20px"></a>
+        <a href="{% url 'regi' %}"><img src="{% static 'Images/user.png'%}" height="20px" width="20px"></a>
+    </nav>
+    <div class="top">
+        <nav class="navbar">
+            <a href="../index.html"><img src="../Images/home.png" height="40px" width="100px"></a>
+            <span class="drop">
+                <a href="destination.html">Destinations |</a>
+                <div class="dropcon">
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="hokkaido.html">
+                                        <img src="../Images/newpage/hokkaido.png" height="40px" width="40px"><br><br>
+                                        <b>HOKKAIDO</b><br>
+                                        <i>Asahikawa</i><br>
+                                        <i>Hakodate</i><br>
+                                        <i>Kushiro</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="tohoku.html">
+                                        <img src="../Images/newpage/tohoku.png" height="40px" width="40px"><br><br>
+                                        <b>TOHOKU</b><br>
+                                        <i>Aomori</i><br>
+                                        <i>Fukushima</i><br>
+                                        <i>Yamagata</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="hokuriku.html">
+                                        <img src="../Images/newpage/hokurikushinetsu.png" height="40px" width="40px"><br><br>
+                                        <b>HOKURIKU SHINETSU</b><br>
+                                        <i>Ishikawa</i><br>
+                                        <i>Fukui</i><br>
+                                        <i>Toyama</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="kanto.html">
+                                        <img src="../Images/newpage/kanto.png" height="40px" width="40px"><br><br>
+                                        <b>KANTO</b><br>
+                                        <i>Tokyo</i><br>
+                                        <i>Chiba</i><br>
+                                        <i>Saitama</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="tokai.html">
+                                        <img src="../Images/newpage/tokai.png" height="40px" width="40px"><br><br>
+                                        <b>TOKAI</b><br>
+                                        <i>Aichi</i><br>
+                                        <i>Shizuoka</i><br>
+                                        <i>Yamanashi</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="../other/error.html">
+                                        <img src="../Images/newpage/kansai.png" height="40px" width="40px"><br><br>
+                                        <b>KANSAI</b><br>
+                                        <i>Kyoto</i><br>
+                                        <i>Osaka</i><br>
+                                        <i>Hyogo</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="../other/error.html">
+                                        <img src="../Images/newpage/chugoku.png" height="40px" width="40px"><br><br>
+                                        <b>CHUGOKU</b><br>
+                                        <i>Hiroshima</i><br>
+                                        <i>Okayama</i><br>
+                                        <i>Shimane</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="../other/error.html">
+                                        <img src="../Images/newpage/shikoku.png" height="40px" width="40px"><br><br>
+                                        <b>SHIKOKU</b><br>
+                                        <i>Ehime</i><br>
+                                        <i>Kagawa</i><br>
+                                        <i>Tokushima</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="../other/error.html">
+                                        <img src="../Images/newpage/kyushu.png" height="40px" width="40px"><br><br>
+                                        <b>KYUSHU</b><br>
+                                        <i>Fukuoka</i><br>
+                                        <i>Nagasaki</i><br>
+                                        <i>Miyazaki</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="../other/error.html">
+                                        <img src="../Images/newpage/oki.png" height="40px" width="40px"><br><br>
+                                        <b>OKINAWA</b><br>
+                                        <i>Kerama Island</i><br>
+                                        <i>Ishigaki Island</i><br>
+                                        <i>Miyako Island</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </span>
+            <span class="drop">
+                <a href="">Things to Do |</a>
+                <div class="dropcon">
+                    <ul>
+                        <li>Nature & Outdoor</li>
+                        <li>Tradition</li>
+                        <li>Food & Drink</li>
+                        <li>Art & Culture</li>
+                        <li>Relaxation</li>
+                    </ul><BR>
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>Diving in Japan</td>
+                                <td>Japanese Gardens</td>
+                                <td>Sushi in Japan</td>
+                                <td>Art Festivals</td>
+                                <td>Onsen</td>
+                            </tr>
+                            <tr>
+                                <td>Skiing in Japan</td>
+                                <td>Japanese Crafts</td>
+                                <td>Vegetarian & Non Veg Guide</td>
+                                <td>Japanese Anime & Comics</td>
+                                <td>Japanese Gardens</td>
+                            </tr>
+                            <tr>
+                                <td>Seasonal Flowers</td>
+                                <td>Temple Stays</td>
+                                <td>Local Street Food</td>
+                                <td>Japanese Ceramics</td>
+                                <td>Wellness Travel in Japan</td>
+                            </tr>
+                            <tr>
+                                <td>Sustainable Outdoors</td>
+                                <td>Heritage Stays</td>
+                                <td>Yakitori</td>
+                                <td>Local Crafts</td>
+                                <td>Shinrin-Yoku</td>
+                            </tr>
+                            <tr>
+                                <td>World Heritage</td>
+                                <td>Japanese Tea Ceremony</td>
+                                <td>Local cuisine Eastern Japan</td>
+                                <td>Performing Arts</td>
+                                <td>Stargazing in Japan</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="navlef">
+                        <ul>
+                            <li><img src="../Images/newpage/skii.jpg" height="90px" width="120px"></li>
+                            <li><img src="../Images/newpage/garden.jpg" height="90px" width="120px"></li>
+                            <li><img src="../Images/newpage/sushi.jpg" height="90px" width="120px"></li>
+                            <li><img src="../Images/newpage/art.jpg"  height="90px" width="120px"></li>
+                            <li><img src="../Images/newpage/onsen.jpg" height="90px" width="120px"></li>
+                        </ul>
+                    </section>
+                </div>
+            </span>
+            <span class="drop">
+                <a href="../other/error.html">Plan Your Trip |</a>
+                <div class="dropcon">
+                    <ul>
+                        <li>First-Time Visitor Info</li>
+                        <li>All Stories & Guides</li>
+                        <li>All Itineraries</li>
+                    </ul><BR>
+                    <section class="navrig">
+                        <table>
+                            <tr>
+                                <td>Visa Information</td>
+                                <td>Shopping</td>
+                                <td>Hokkaido Great Outdoors</td>
+                            </tr>
+                            <tr>
+                                <td>Getting to Japan</td>
+                                <td>Anime Tourism</td>
+                                <td>Scenic World Heritage</td>
+                            </tr>
+                            <tr>
+                                <td>Airport Access</td>
+                                <td>Temple Stays</td>
+                                <td>Shikoku's Nature and Traditions</td>
+                            </tr>
+                            <tr>
+                                <td>Information for Traveling to Japan</td>
+                                <td>Countryside Stays</td>
+                                <td>Southern kyushu by Rail</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section class="navlef">
+                        <ul>
+                            <li><img src="../Images/newpage/flag.png" height="90px" width="120px"></li>
+                            <li><img src="../Images/newpage/mall.png" height="90px" width="120px"></li>
+                            <li><img src="../Images/newpage/heritage.jpg" height="90px" width="120px"></li>
+                        </ul>
+                    </section>
+                </div>
+            </span>
+            <span>
+                <a href="../other/error.html">News |</a>
+            </span>
+            <a class="imgpad" href="../other/error.html"><img src="../Images/fb.png" height="20px" width="20px"></a>
+            <a href="../other/error.html"><img src="../Images/insta.png" height="20px" width="20px"></a>
+            <a href="../other/error.html"><img src="../Images/youtube.png" height="20px" width="20px"></a>
+            <a href="../other/error.html"><img src="../Images/user.png" height="20px" width="20px"></a>
+        </nav>
+        <!--Banner-->
+        <div class="banner" style="background-image: url(../Images/Tokai/tok1.jpg);">
+            <span class="s">Explore Japan's World Renowned Destinations</span><br>
+            <span class="b">TOKAI</span>
+        </div>
+    </div>
+    <!--Contect des-->
+    <div class="newbod">
+        <section>
+            <h3>Served by the shinkansen between Tokyo and Kyoto, the Tokai region features both world-renowned destinations and local splendor</h3>
+            <p>A quintessentially Japanese region, the prefectures that comprise Tokai mix ancient heritage, modern industry and stunning nature. Mt. Fuji, 
+                flanked by the hot springs of Hakone and the Fuji Five Lakes, is one of the world's most iconic peaks. Tokai both embraces the past and looks toward
+                 the future with World Heritage site Shirakawa-go and its thatched-roof cottages, the nation's biggest green tea plantations, Toyota Motor Corp. and 
+                 Ise-Jingu, the most revered shrine in Japan.
+            </p>
+        </section>
+        <section class="newbodimg">
+            <img src="../Images/Tokai/tok2.jpg" height="300px" width="50%">
+            <img src="../Images/Tokai/Tok3.jpg" height="300px" width="50%">
+        </section>
+        <section class="newbodhig">
+            <h3>Don't Miss</h3>
+            <ul>
+                <li>Mt. Fuji—Japan's most iconic mountain</li>
+                <li>The picturesque mountain town of Takayama and nearby Shirakawa-go</li>
+                <li>Japan's most sacred shrine, Ise-Jingu</li>
+                <li>White sand beaches and relaxed atmosphere in the Izu Peninsula</li>
+            </ul>
+        </section>
+    </div>
+    <hr>
+    <!--Location 2-->
+    <div class="newbod">
+        <h1>AICHI</h1>
+        <section class="newbodimg">
+            <img src="../Images/Tokai/tok4.jpg" height="300px" width="50%">
+            <img src="../Images/Tokai/tok5.jpg" height="300px" width="50%">
+        </section>
+        <section>
+            <h3>Known as the home of Toyota, Aichi also offers samurai history, unique local foods, great nightlife, rustic beauty and distinctive arts and crafts</h3>
+            <p>From being the stronghold of legendary shogun Ieyasu Tokugawa and the scene of many epic feudal battles to hosting the World Cosplay Summit, Aichi Prefecture has a long 
+                and varied history. An integral contributor to Japan's manufacturing and technological strength, Aichi is most famous as the headquarters of Toyota Motors, but companies 
+                such as Noritake and Brother Industries also call Aichi home. Animators Studio Ghibli are slated to open a theme park in the prefecture in 2022.</p>
+        </section>
+        <section>
+            <h3>How to Get There</h3>
+            <p>Located in the middle of Honshu, Nagoya is a key transportation hub. Bullet trains there take only 35 and 50 minutes from Kyoto and Osaka, respectively, and an hour and 40 minutes 
+                from Tokyo. Aichi hosts two airports, with Nagoya Airport mostly handling domestic flights and Centrair, international travel.
+            </p>
+            <p>
+                Well served by JR and private railways such as Meitetsu, Aichi Prefecture offers a robust transport network and convenient train and bus access to neighboring prefectures such as 
+                Gifu and Mie. Private and highway buses are cheaper options for those traveling from major cities.
+            </p>
+        </section>
+        <section class="newbodhig">
+            <h3>Don't Miss</h3>
+            <ul>
+                <li>Fried chicken wings, hatcho miso sauce, funky foodstuffs and other traditional local cuisine</li>
+                <li>Chausuyama Kogen, a ski resort boasting two kilometers of slopes</li>
+                <li>Lively and entertaining New Year's celebrations at Osu Kannon</li>
+                <li>Inuyama Castle, the oldest original castle in Japan and a National Treasure</li>
+            </ul>
+        </section>
+    </div>
+    <hr>
+    <!--Location 2-->
+    <div class="newbod">
+        <h1>SHIZUOKA</h1>
+        <section class="newbodimg">
+            <img src="../Images/Tokai/tok6.jpg" height="300px" width="50%">
+            <img src="../Images/Tokai/tok7.jpg" height="300px" width="50%">
+        </section>
+        <section>
+            <h3>Refresh your spirit in Shizuoka's mountains, temples and shores, depicted in art and poetry. 
+                Eat some of the country's finest seafood and sip premium green tea</h3>
+            <p>
+                Shizuoka Prefecture is a popular urbanite destination situated midway between Tokyo and Nagoya, away from the hustle and bustle of the cities. 
+                Shizuoka has two distinct faces. One is mountainous and green, dominated by deep forests, verdant tea plantations, and Mt. Fuji—the country's 
+                most recognizable symbol. The other face is liquid: the sea, beaches and onsen where millions come to relax and play every year.
+            </p>
+        </section>
+        <section>
+            <h3>How to Get There</h3>
+            <p>Shizuoka is accessible by the JR Tokaido Shinkansen from Tokyo, Kyoto, Osaka, Nagoya and beyond as well as regular JR trains, highway bus and car. 
+                You can also fly into Mt. Fuji Shizuoka Airport.
+            </p>
+            <p>
+                Tokyo is the usual jump-off point for a journey to Shizuoka. The JR Tokaido Shinkansen can get you to the coastal hot spring resort of Atami or 
+                Shizuoka Station in an hour or less; you can use your Japan Rail Pass for this and other slower JR trains. Local trains take about three hours. 
+                Highway buses run regularly between Tokyo and Shizuoka, and take around the same time as a regular train. Mt. Fuji Shizuoka Airport, built in 2009,
+                 handles both domestic and international flights for several airlines.
+            </p>
+        </section>
+        <section class="newbodhig">
+            <h3>Don't Miss</h3>
+            <ul>
+                <li>Tea fields on the Nihondaira Plateau , views of Mt. Fuji and the Pacific</li>
+                <li>The Izu Peninsula's white-sand beaches, crystal clear waters and rugged coastline</li>
+                <li>Two of Japan's top-class onsen resorts, in Atami and Ito</li>
+                <li>World-class art museums and Sunpu Castle, where shogun Tokugawa Ieyasu lived</li>
+            </ul>
+        </section>
+    </div>
+    <hr>
+    <!--Location 3-->
+    <div class="newbod">
+        <h1>YAMANASHI</h1>
+        <section class="newbodimg">
+            <img src="../Images/Tokai/tok8.jpeg" height="300px" width="50%">
+            <img src="../Images/Tokai/tok9.jpeg" height="300px" width="50%">
+        </section>
+        <section>
+            <h3>Discover this landlocked prefecture, with mountains floating in a sea of clouds and roads leading to the heart of rural Japan</h3>
+            <p>The Yoshida Trail, the main climbing route to the summit of Mt. Fuji, begins in Yamanashi Prefecture. The Fuji Five Lakes in the surrounding 
+                area are great places to explore the forests, caves, small museums and local food and craft. The region's pure waters—used to make fine sake 
+                and whisky—are the most prized in all Japan. Orchards filled with cherries, strawberries, peaches and other fruit cover the land, while 
+                Yamanashi's vineyards produce much of Japan's wine. Discover peace and solitude of Yamanashi's little-known temples and shrines set in the 
+                mountains.</p>
+        </section>
+        <section class="newbodhig">
+            <h3>Don't Miss</h3>
+            <ul>
+                <li>Climbing Mt. Fuji from the 5th Station on the Yoshida Trail</li>
+                <li>Visiting Lake Kawaguchi and the Fuji Five Lakes area</li>
+                <li>Staying at the world's oldest onsen hotel, Nishiyama Onsen Keiunkan</li>
+                <li>The stunning vistas of orchards and vineyards in the Kofu Basin</li>
+            </ul>
+        </section>
+    </div>
+    <!--Footer-->
+    <footer style="clear: both;">
+        <div class="detail">
+            <b>Home &gt; Travel Japan - The Offical Japan Guide</b>
+        </div>
+        <div class="hellin">
+            <table>
+                <tr>
+                    <th>Helpful Links</th>
+                    <th>Related JNTO Sites</th>
+                    <th>About JNTO</th>
+                </tr>
+                <tr>
+                    <td><a href="../other/error.html">First-time Visitors</a></td>
+                    <td><a href="../other/error.html">Japan Covention Bureau</a></td>
+                    <td><a href="../other/error.html">Who we are</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../other/error.html">Weather in Japan</a></td>
+                    <td><a href="../other/error.html">JNTO for the Media</a></td>
+                    <td><a href="../other/error.html">Contact us</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../other/error.html">Japan Tours & Activities</a></td>
+                    <td><a href="../other/error.html"></a></td>
+                    <td><a href="../other/error.html">Tenders & Notices</a></td>
+                </tr>
+                <tr>
+                    <td><a href="../other/error.html">FAQ</a></td>
+                </tr>
+            </table>
+            <hr>
+            <div class="jnto">
+                <section><img src="../Images/JNTO.jpg" alt=""></section>
+                <section>Privacy Pilcy</section>
+                <section>Cookie Policy</section>
+                <section>Terms of Use</section>
+                <section>Links</section>
+                <section><img src="../Images/fb.png" width="30px" height="30px"></section>
+                <section><img src="../Images/insta.png" width="30px" height="30px"></section>
+                <section><img src="../Images/youtube.png" width="30px" height="30px"></section>
+            </div>
+        </div>
+        <div class="coptab">
+            <section>
+                <span>Select Language</span>
+                <select name="lang">
+                    <option value="1">Japanese</option>
+                    <option value="2">Korean</option>
+                    <option value="3">Chinese</option>
+                    <option value="4">Hindi</option>
+                    <option value="5">French</option>
+                </select>
+            </section>
+            <section>
+                <span>Copyright © Japan National Tourism Organization. All Rights Rederved. 
+                </span>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

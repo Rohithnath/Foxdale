@@ -1,0 +1,274 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Images/fav.png' %}">
+    <link rel='stylesheet' href="{% static 'css/home.css' %}">
+    <title>Japan a dream destination</title>
+
+    <style>
+        th{
+            padding: 10px;
+        }
+        td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'home' %}"><img src="{% static 'Images/home.png' %}" height="40px" width="100px"></a>
+        <span class="drop">
+            <a href="{% url 'dest' %}">Destinations |</a>
+            <div class="dropcon">
+                <section class="navrig">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="{% url 'hokkaido' %}">
+                                    <img src="{% static 'Images/newpage/hokkaido.png' %}" height="40px" width="40px"><br><br>
+                                    <b>HOKKAIDO</b><br>
+                                    <i>Asahikawa</i><br>
+                                    <i>Hakodate</i><br>
+                                    <i>Kushiro</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'tohoku' %}">
+                                    <img src="{% static 'Images/newpage/tohoku.png' %}" height="40px" width="40px"><br><br>
+                                    <b>TOHOKU</b><br>
+                                    <i>Aomori</i><br>
+                                    <i>Fukushima</i><br>
+                                    <i>Yamagata</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'hokuriku' %}">
+                                    <img src="{% static 'Images/newpage/hokurikushinetsu.png' %}" height="40px" width="40px"><br><br>
+                                    <b>HOKURIKU SHINETSU</b><br>
+                                    <i>Ishikawa</i><br>
+                                    <i>Fukui</i><br>
+                                    <i>Toyama</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'kanto' %}">
+                                    <img src="{% static 'Images/newpage/kanto.png' %}" height="40px" width="40px"><br><br>
+                                    <b>KANTO</b><br>
+                                    <i>Tokyo</i><br>
+                                    <i>Chiba</i><br>
+                                    <i>Saitama</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'tokai' %}">
+                                    <img src="{% static 'Images/newpage/tokai.png' %}" height="40px" width="40px"><br><br>
+                                    <b>TOKAI</b><br>
+                                    <i>Aichi</i><br>
+                                    <i>Shizuoka</i><br>
+                                    <i>Yamanashi</i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/kansai.png' %}" height="40px" width="40px"><br><br>
+                                    <b>KANSAI</b><br>
+                                    <i>Kyoto</i><br>
+                                    <i>Osaka</i><br>
+                                    <i>Hyogo</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/chugoku.png'%}" height="40px" width="40px"><br><br>
+                                    <b>CHUGOKU</b><br>
+                                    <i>Hiroshima</i><br>
+                                    <i>Okayama</i><br>
+                                    <i>Shimane</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/shikoku.png'%}" height="40px" width="40px"><br><br>
+                                    <b>SHIKOKU</b><br>
+                                    <i>Ehime</i><br>
+                                    <i>Kagawa</i><br>
+                                    <i>Tokushima</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/kyushu.png'%}" height="40px" width="40px"><br><br>
+                                    <b>KYUSHU</b><br>
+                                    <i>Fukuoka</i><br>
+                                    <i>Nagasaki</i><br>
+                                    <i>Miyazaki</i>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url 'error' %}">
+                                    <img src="{% static 'Images/newpage/oki.png'%}" height="40px" width="40px"><br><br>
+                                    <b>OKINAWA</b><br>
+                                    <i>Kerama Island</i><br>
+                                    <i>Ishigaki Island</i><br>
+                                    <i>Miyako Island</i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </span>
+        <span class="drop">
+            <a href="{% url 'ttd' %}">Things to Do |</a>
+            <a href="{% url 'ttd' %}"><div class="dropcon">
+                <ul>
+                    <li>Nature & Outdoor</li>
+                    <li>Tradition</li>
+                    <li>Food & Drink</li>
+                    <li>Art & Culture</li>
+                    <li>Relaxation</li>
+                </ul><BR>
+                <section class="navrig">
+                    <table>
+                        <tr>
+                            <td>Diving in Japan</td>
+                            <td>Japanese Gardens</td>
+                            <td>Sushi in Japan</td>
+                            <td>Art Festivals</td>
+                            <td>Onsen</td>
+                        </tr>
+                        <tr>
+                            <td>Skiing in Japan</td>
+                            <td>Japanese Crafts</td>
+                            <td>Vegetarian & Non Veg Guide</td>
+                            <td>Japanese Anime & Comics</td>
+                            <td>Japanese Gardens</td>
+                        </tr>
+                        <tr>
+                            <td>Seasonal Flowers</td>
+                            <td>Temple Stays</td>
+                            <td>Local Street Food</td>
+                            <td>Japanese Ceramics</td>
+                            <td>Wellness Travel in Japan</td>
+                        </tr>
+                        <tr>
+                            <td>Sustainable Outdoors</td>
+                            <td>Heritage Stays</td>
+                            <td>Yakitori</td>
+                            <td>Local Crafts</td>
+                            <td>Shinrin-Yoku</td>
+                        </tr>
+                        <tr>
+                            <td>World Heritage</td>
+                            <td>Japanese Tea Ceremony</td>
+                            <td>Local cuisine Eastern Japan</td>
+                            <td>Performing Arts</td>
+                            <td>Stargazing in Japan</td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="navlef">
+                    <ul>
+                        <li><img src="{% static 'Images/newpage/skii.jpg'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/garden.jpg'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/sushi.jpg'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/art.jpg'%}"  height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/onsen.jpg'%}" height="90px" width="120px"></li>
+                    </ul>
+                </section>
+            </div></a>
+        </span>
+        <span class="drop">
+            <a href="{% url 'error' %}">Plan Your Trip |</a>
+            <div class="dropcon">
+                <ul>
+                    <li>First-Time Visitor Info</li>
+                    <li>All Stories & Guides</li>
+                    <li>All Itineraries</li>
+                </ul><BR>
+                <section class="navrig">
+                    <table>
+                        <tr>
+                            <td>Visa Information</td>
+                            <td>Shopping</td>
+                            <td>Hokkaido Great Outdoors</td>
+                        </tr>
+                        <tr>
+                            <td>Getting to Japan</td>
+                            <td>Anime Tourism</td>
+                            <td>Scenic World Heritage</td>
+                        </tr>
+                        <tr>
+                            <td>Airport Access</td>
+                            <td>Temple Stays</td>
+                            <td>Shikoku's Nature and Traditions</td>
+                        </tr>
+                        <tr>
+                            <td>Information for Traveling to Japan</td>
+                            <td>Countryside Stays</td>
+                            <td>Southern kyushu by Rail</td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="navlef">
+                    <ul>
+                        <li><img src="{% static 'Images/newpage/flag.png'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/mall.png'%}" height="90px" width="120px"></li>
+                        <li><img src="{% static 'Images/newpage/heritage.jpg'%}" height="90px" width="120px"></li>
+                    </ul>
+                </section>
+            </div>
+        </span>
+        <span>
+            <a href="{% url 'regi' %}">Register or Login |</a>
+        </span>
+        <a class="imgpad" href="{% url 'error' %}"><img src="{% static 'Images/fb.png'%}" height="20px" width="20px"></a>
+        <a href="{% url 'error' %}"><img src="{% static 'Images/insta.png'%}" height="20px" width="20px"></a>
+        <a href="{% url 'error' %}"><img src="{% static 'Images/youtube.png'%}" height="20px" width="20px"></a>
+        <a href="{% url 'regi' %}"><img src="{% static 'Images/user.png'%}" height="20px" width="20px"></a>
+    </nav>
+    <div style="margin-left: auto;margin-right: auto;margin-top:50px;margin-bottom: 60px; border: 1px black solid;width:50%;border-radius: 15px;">
+        <form action="{% url 'newpass'%}" method="POST">
+            {% csrf_token %}
+            <table style="margin-left: auto;margin-right: auto;">
+                <tr>
+                    <th colspan="2"><h2>Change User Password</h2></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Username</label>
+                    </td>
+                    <td>
+                        <input type="text" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Current Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">New password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="newpassword">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Update Password" style="margin-left: 120px;">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
