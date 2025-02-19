@@ -8,6 +8,7 @@ from django.conf import settings
 import hmac
 import hashlib
 import razorpay
+from django.shortcuts import get_object_or_404, redirect
 
 # Create your views here.
 def home(request):
@@ -219,24 +220,29 @@ def payment_page(request,item):
     }
     return render(request,'Payment.html',context)
 
-client=razorpay.Client(auth=(settings.KEY,settings.SECRET))
+client = razorpay.Client(auth=(settings.KEY, settings.SECRET))
 
-
-def plan_details(request,slug,item):
+def plan_details(request, slug, item):
     if not request.user.is_authenticated:
         print("Login & Try Again")
         return redirect('store_app:loginpage')
-    # plan = get_object_or_404(Plan, slug=slug)
-    plan=furnituredetails.objects.filter(id=item)
+    
+    plan = get_object_or_404(furnituredetails, id=item)
+    
     key = settings.KEY
     amount = plan.productprice * 100  # Amount in paise
     currency = 'INR'
-    order = client.order.create({'amount': amount, 'currency': currency, 'payment_capture': "1"})        # RAZORPAY_KEY = settings.KEY
-    print("Order ID:", order['id'])
-    print(order)
-    order_id = order['id']
-    order_amount = order['amount']
-    order_currency = order['currency']
-    secret = settings.SECRET
-    print(order_id, order_currency, order_amount, secret)
-    return redirect('store_app:payment_page')
+    
+    try:
+        order = client.order.create({'amount': amount, 'currency': currency, 'payment_capture': '1'})
+        print("Order ID:", order['id'])
+        order_id = order['id']
+        order_amount = order['amount']
+        order_currency = order['currency']
+        secret = settings.SECRET
+        print(order_id, order_currency, order_amount, secret)
+        
+        return redirect('store_app:payment_page')
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return redirect('store_app:payment_page')
