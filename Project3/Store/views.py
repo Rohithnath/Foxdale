@@ -96,7 +96,7 @@ def storedetail(request):
         furnituredetails.objects.create(productid=productid, productname=productname, productimage=productimage, productprice=productprice,
                                         productdesc=productdesc, productmanu=productmanu, productdime=productdime,productstock=productstock,product_pay=product_pay)
         print('Sucessfully created')
-        return redirect('store_app:storeitems')
+        return redirect('store_app:products')
     
 #Edit Store items
 

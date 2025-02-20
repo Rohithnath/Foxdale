@@ -32,7 +32,7 @@ class login(models.Model):
 class furnituredetails(models.Model):
     productid=models.IntegerField(unique=True)
     productname=models.CharField(max_length=50)
-    productimage=models.ImageField(upload_to='productimages')
+    productimage=models.ImageField(upload_to='productimages', default='none')
     productprice=models.IntegerField()
     productdesc=models.TextField(default='No description available')
     productmanu=models.CharField(max_length=50, default='NA')
